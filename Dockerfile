@@ -15,7 +15,7 @@ RUN yum -y install deltarpm \
 
 RUN yum install -y  python3 python3-pip
 
-# Install Ansible via Pip.
+# Upgrade pip & install Python3 venv.
 RUN pip3 install --upgrade pip \
     virtualenv
 
