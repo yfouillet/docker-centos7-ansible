@@ -1,0 +1,7 @@
+---
+    services: docker
+    
+    script:
+      - docker build . -t docker-centos7-ansible
+      - docker run --name test-docker-centos7-ansible -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro docker-centos7-ansible
+      - docker exec -t test-docker-centos7-ansible ansible --version
